@@ -1,36 +1,40 @@
-article{
+$default-timings: (linear, ease, ease-in, ease-out, ease-in-out);
 
-    background-color: $primary;
+@each $timing in $default-timings {
+    .timing-#{$timing} {
+        animation-timing-function: $timing;
+    }
 }
 
+@keyframes transition-animation {
 
-@keyframes transition-animation 
-{
- 
-    100%{
+    50% {
         top: 0rem;
         left: 9rem;
     }
 }
 
+article {
 
-.transition{
-    width: 10rem;
-    height: 10rem;
-    background-color: $secondary;
+    background-color: $primary;
+
+    .transition {
+        width: 10rem;
+        height: 10rem;
+        background-color: $secondary;
+
+        &>div {
+            width: 1rem;
+            height: 1rem;
+            background-color: $text;
+            position: relative;
+            top: 9rem;
+            left: 0;
+
+            animation-name: transition-animation;
+            animation-duration: 2s;
+            animation-direction: normal;
+            animation-iteration-count: infinite;
+        }
+    }
 }
-
-.transition > div{
-    width: 1rem;
-    height: 1rem;
-    background-color: $text;
-    position: relative;
-    top: 9rem;
-    left: 0;
-
-    animation-name:transition-animation;
-    animation-duration: 2s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
