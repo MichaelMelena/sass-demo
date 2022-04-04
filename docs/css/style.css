@@ -1,0 +1,45 @@
+article {
+  background-color: #ffa600;
+}
+
+@keyframes transition-animation {
+  100% {
+    top: 0rem;
+    left: 9rem;
+  }
+}
+.transition {
+  width: 10rem;
+  height: 10rem;
+  background-color: #666;
+}
+
+.transition > div {
+  width: 1rem;
+  height: 1rem;
+  background-color: #222;
+  position: relative;
+  top: 9rem;
+  left: 0;
+  animation-name: transition-animation;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+:root {
+  --priamry: $primary;
+  --secondary: $secondary;
+  --text: $text;
+  --bg: $bg;
+}
+
+body {
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+/*# sourceMappingURL=style.css.map */

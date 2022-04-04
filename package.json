@@ -1,0 +1,23 @@
+{
+  "name": "sass-demo",
+  "version": "1.0.0",
+  "description": "sass demo site",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "compile": "sass scss:docs/css/",
+    "watch" : "sass -c --watch scss:docs/css"
+  }, 
+  "keywords": [
+    "sass",
+    "css",
+    "html"
+  ],
+  "author": "Michael Melena",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.49.11"
+  }
+}

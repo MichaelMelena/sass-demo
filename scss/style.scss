@@ -1,0 +1,17 @@
+@import "variables";
+@import "transition-demo";
+
+:root{
+    --priamry: $primary;
+    --secondary: $secondary;
+    --text: $text;
+    --bg: $bg;
+}
+
+body{
+    color: $text;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+}
