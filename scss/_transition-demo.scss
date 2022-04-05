@@ -10,25 +10,36 @@ $default-timings: (linear, ease, ease-in, ease-out, ease-in-out);
 
     50% {
         top: 0rem;
-        left: 9rem;
+        left: calc(100% - 1rem);
     }
 }
 
 article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    background-color: $primary;
+    background-color: $bg;
 
     .transition {
-        width: 10rem;
+        width: 100%;
         height: 10rem;
-        background-color: $secondary;
+        background-color: $primary;
+        margin: 1rem 0;
+
+        // border: 0.25rem solid $text;
+        &>h3 {
+            margin: 0;
+            text-align: center;
+            color: $text;
+        }
 
         &>div {
             width: 1rem;
             height: 1rem;
             background-color: $text;
             position: relative;
-            top: 9rem;
+            top: 8rem;
             left: 0;
 
             animation-name: transition-animation;
